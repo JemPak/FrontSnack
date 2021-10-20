@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img src="@/assets/logo.png" alt="" class="logo">
+    <img src="@/assets/SnackLogo.png" alt="" class="logo">
     <div class="buscar">
       <input type="text" placeholder="Buscar" required>
       <div class="but">
@@ -17,9 +17,9 @@
     <img src="./assets/frutos2.jpg" width="1349">
   </div>
   <div class="introduccion">
-    <h1>
+    <h2>
       Con el creciente aumento de la obesidad en Colombia, nos hemos vistos en la tarea de diseñar un plan de manejo integral en donde las personas tengan acceso a información de interes sobre los beneficios que los superalimentos como los frutos secos pueden brindarle a nuestra salud.
-    </h1>
+    </h2>
   </div>
   <div class="texto">
     <h2  align="center" >¿ Quienes  Somos ?</h2>  
@@ -59,24 +59,76 @@
 </script>
 
 <style>
-  body{
-    margin:0 0 0 0;
-    align-content: center;
-    justify-content:center;
-  }
 
-  .header{
+header{
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 10px 0px;
-    background-color: rgb(238, 170, 62);
-  }
+    border-bottom: 3px solid rgb(194, 123, 9);
+    margin-bottom: 100px;
+    background-color: #f2b327;
+}
+.logo{
+    margin-right: 800px;
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+    position: static;
+}
+button{
+    display: inline-block;
+    position: relative;
+    padding: 0px 30px;
+    border: 0ch;
+    background-color: #f2b327;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    transition: all 0.5s;
+    cursor: pointer;
+
+}
+.buscar{
+    position: absolute;
+    padding: 5px;
+}
+.buscar input{
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: black;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s;
+    
+}
+
+.but{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgb(194, 123, 9);
+    width: 55px;
+    height: 55px;
+    line-height: 55px; 
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
 
   .imagen{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 0cm;
+    margin: -2.65cm;
   }
 
   .introduccion{
@@ -87,43 +139,44 @@
     text-align: center;
     text-justify: auto;
     line-height: 1cm;
+    margin: 2.5cm 0cm 0cm;
   }
 
   .texto{
-    padding: 0cm 5cm;
+    padding: 0cm 4cm;
     color: darkred;
     display: flex;
     justify-content: space-between;
     align-content: center;
+    margin: 0.3cm;
   }
 
   .cuadros{
-    padding: 0cm 1cm;
+    padding: 0cm 2cm;
     display: flex;
     justify-content:space-around;
     align-content: center;
   }
 
   .somos {
-    padding: 0cm 0.5cm;
+    padding: 0.5cm;
     border-color: black ;
     border-width: 0.5mm;
     border-style: solid;
   }
 
   .oferta{
-    padding: 0cm 0.5cm;
+    padding: 0.5cm;
     border-color: black ;
     border-width: 0.5mm;
     border-style: solid;
   }
 
   .beneficios{
-    padding: 0cm 0.5cm;
+    padding: 0.5cm;
     border-color: black ;
     border-width: 0.5mm;
     border-style: solid;
   }
-
   
 </style>
