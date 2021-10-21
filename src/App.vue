@@ -26,7 +26,7 @@ export default {
 
   },
   methods: {
-    
+
   },
   created: function(){
 
@@ -40,7 +40,10 @@ export default {
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+nav{
+  position: relative;
+  left: 600px;
+}
 header{
     display: flex;
     justify-content: space-around;
