@@ -3,6 +3,7 @@ import App from "./App.vue";
 //import  #name_component from './components/Producto.vue'
 import Contacto from './components/Contacto.vue'
 //import #name_componente from './components/Solicitud.vue'
+import Home from './components/Home.vue'
 
 // Agregar la ruta del componente acá
 const routes = [
@@ -14,8 +15,13 @@ const routes = [
   {
     path: "/Contacto",
     name: "Contacto",
-    component: Contacto
+    component: Contacto,
   },
+  {
+    path:"/Home",
+    name: "Home",
+    component: Home,
+  }
 ];
 const router = createRouter({
   history: createWebHistory(),

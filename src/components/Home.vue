@@ -1,20 +1,6 @@
 <template>
-  <header>
-    <img src="@/assets/SnackLogo.png" alt="" class="logo">
-    <div class="buscar">
-      <input type="text" placeholder="Buscar" required>
-      <div class="but">
-        <i class="fas fa-search icon"></i>
-      </div>
-    </div>
-    <nav>
-      <button>Nosotros</button>
-      <button>Productos</button>
-      <button>Contacto</button>
-    </nav>
-  </header>
   <div class="imagen"> 
-    <img src="./assets/frutos2.jpg" width="1349">
+    <img src="@/assets/frutos2.jpg"    width=1349>
   </div>
   <div class="introduccion">
     <h2>
@@ -50,85 +36,20 @@
 
 <script>
   export default{
-    name: 'App',
+    name: 'Home',
     data: function(){},
 
     methods:{},
-    created: function(){}
+    created: function(){
+        console.log("hola");}
   }
 </script>
 
 <style>
-
-header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0px;
-    border-bottom: 3px solid rgb(194, 123, 9);
-    margin-bottom: 100px;
-    background-color: #f2b327;
-}
-.logo{
-    margin: 0cm 1cm;
-    width: 120px;
-    height: 50px;
-    cursor: pointer;
-    position: static;
-}
-button{
-    display: inline-block;
-    position: relative;
-    padding: 0px 30px;
-    border: 0ch;
-    background-color: #f2b327;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: black;
-    transition: all 0.5s;
-    cursor: pointer;
-
-}
-.buscar{
-    position: absolute;
-    padding: 5px;
-}
-.buscar input{
-    width: 0px;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 18px;
-    color: black;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 30px;
-    transition: all 0.6s;
-    
-}
-
-.but{
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: rgb(194, 123, 9);
-    width: 55px;
-    height: 55px;
-    line-height: 55px; 
-    text-align: center;
-    color: black;
-    font-size: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    
-}
-
   .imagen{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     padding: 0cm;
-    margin: -2.65cm;
+    margin: -2.65cm 0cm;
+    position: relative;
   }
 
   .introduccion{

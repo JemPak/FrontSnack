@@ -8,7 +8,7 @@
             </div>
         </div>
         <nav>
-            <button v-on:click="fefefef ">Nosotros</button>
+            <button v-on:click="Home">Nosotros</button>
             <button>Productos</button>
             <button>Contacto</button>
         </nav>
@@ -16,7 +16,9 @@
     <!-- <footer>
         <img src="@/assets/SnackLogo.png" alt="" class="logo">
     </footer> -->
-        
+  <div>
+    <router-view></router-view>
+  </div>      
 </template>
 
 <script>
@@ -26,10 +28,13 @@ export default {
 
   },
   methods: {
+    Home: function(){
+      this.$router.push({ name: "Home" });
+      } 
     
   },
   created: function(){
-
+    this.$router.push({ name: "Home" });
   }
 };
 </script>
@@ -54,7 +59,7 @@ header{
 button{
     display: inline-block;
     position: relative;
-    padding: 0px 30px;
+    padding: 0px 10px;
     border: 0ch;
     background-color: #f2b327;
     font-size: 16px;
@@ -145,31 +150,6 @@ button:hover{
     margin-top: -30px;
     margin-left: 250px; 
     float: left;
-}
-
-.form{
-    padding: 0px;
-    width: 800px;
-    float: left;
-    margin-left: 80px;
-    margin-top: -32px;
-}
-
-h1{
-    text-transform: uppercase;
-    margin-bottom: 90px;
-}
-
-input, textarea{
-    outline: none;
-    border: 0px;
-}
-
-.field{
-    margin-bottom: 15px;
-    width: 600px;
-    border: solid 1px #ccc;
-    padding: 10px;
 }
 
 footer{
