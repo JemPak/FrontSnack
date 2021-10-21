@@ -206,4 +206,3 @@ footer{
     background-color: #f2b327;
 }
 </style>
-
