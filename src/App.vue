@@ -10,7 +10,7 @@
         <nav>
             <button v-on:click="Home">Nosotros</button>
             <button>Productos</button>
-            <button>Contacto</button>
+            <button v-on:click="Contacto">Contacto</button>
         </nav>
     </header>
     <!-- <footer>
@@ -31,7 +31,11 @@ export default {
 
     Home: function(){
       this.$router.push({ name: "Home" });
-      } 
+      }, 
+
+    Contacto: function(){
+        this.$router.push({ name: "Contacto" });
+    },
     
   },
   created: function(){

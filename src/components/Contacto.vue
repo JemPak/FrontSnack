@@ -1,21 +1,35 @@
 <template>
-   <header>
-        <img src="@/assets/SnackLogo.png" alt="" class="logo">
-        <div class="buscar">
-            <input type="text" placeholder="Buscar" required>
-            <div class="but">
-                <i class="fas fa-search icon"></i>
+     <div class="container">
+        <div class="banner">
+            <img src ="@/assets/contacto.jpg" class="image">
+            <div class="form">
+                <h1>Solicitud de Contacto</h1>
+
+            <form>
+                <p>Nombre</p> 
+                <input type="text" class="field">
+
+                <p>Telefono</p>
+                <input type="text" class="field">
+
+                <p>Correo electronico</p>
+                <input type="email" class="field">
+
+                <p>Tipo de asesoria</p>
+                <select name="transporte" class="field">
+                    <option>Informacion de los Productos</option>
+                    <option>Informacion de las Maquinas</option>
+                </select>
+
+                <p>Comentarios adicionales</p>
+                <textarea class="field"></textarea>
+                <br>
+                <input type="submit" class="enviar">
+            </form>    
             </div>
         </div>
-        <nav>
-            <button>Nosotros</button>
-            <button>Productos</button>
-            <button>Contacto</button>
-        </nav>
-    </header>
-    <!-- <footer>
-        <img src="@/assets/SnackLogo.png" alt="" class="logo">
-    </footer> -->
+    </div>
+   
         
 </template>
 
