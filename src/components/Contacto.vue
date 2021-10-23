@@ -47,98 +47,6 @@ export default {
 </script>
 
 <style>
-    *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0px;
-    border-bottom: 3px solid rgb(194, 123, 9);
-    margin-bottom: 100px;
-    background-color: #f2b327;
-}
-
-button{
-    display: inline-block;
-    position: relative;
-    padding: 0px 30px;
-    border: 0ch;
-    background-color: #f2b327;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: black;
-    transition: all 0.5s;
-    cursor: pointer;
-
-}
-
-button:hover{
-    padding: 10px 25px;
-    background-color: white;
-    color: #f2b327;
-    border-radius: 12px;
-    
-}
-
-.logo{
-    margin-right: 800px;
-    width: 120px;
-    height: 50px;
-    cursor: pointer;
-    position: static;
-}
-
-.buscar{
-    position: absolute;
-    padding: 5px;
-    
-    
-}
-
-.buscar input{
-    width: 0px;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 18px;
-    color: black;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 30px;
-    transition: all 0.6s;
-    
-}
-
-.but{
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: rgb(194, 123, 9);
-    width: 55px;
-    height: 55px;
-    line-height: 55px; 
-    text-align: center;
-    color: black;
-    font-size: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    
-}
-
-.buscar:hover input{
-    width: 240px;
-    
-}
-
-.buscar input:focus{
-    width: 240px;
-}
-
 .icon1{
     font-size: 45px;
     cursor: pointer;
@@ -210,13 +118,5 @@ p{
     text-transform: uppercase;
     margin-bottom: 2px;
     
-}
-
-footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #f2b327;
 }
 </style>

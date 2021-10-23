@@ -7,10 +7,11 @@
                 <i class="fas fa-search icon"></i>
             </div>
         </div>
-        <nav>
-            <button v-on:click="Home">Nosotros</button>
-            <button>Productos</button>
-            <button v-on:click="Contacto">Contacto</button>
+        <nav class="nav">
+            <button v-on:click="Home" class="boton">Nosotros</button>
+            <button class="boton" >Productos</button>
+            <button v-on:click="Contacto" class="boton">Contacto</button>
+            <button v-on:click="ir_Instalacion" class="boton">Solicitud</button>
         </nav>
     </header>
     <!-- <footer>
@@ -36,6 +37,10 @@ export default {
     Contacto: function(){
         this.$router.push({ name: "Contacto" });
     },
+    ir_Instalacion: function(){
+        this.$router.push({ name: "Instalacion" });
+
+    },
     
   },
   created: function(){
@@ -45,61 +50,71 @@ export default {
 </script>
 
 <style>
-    *{
+
+body{
     margin: 0;
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-nav{
-  position: relative;
-  left: 600px;
-}
 header{
+    position: fixed;
+    width: 100%;
+    height: 4.5rem;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 0px;
     border-bottom: 3px solid rgb(194, 123, 9);
-    margin-bottom: 100px;
     background-color: #f2b327;
 }
-
-button{
-    display: inline-block;
+.nav{
     position: relative;
+    width: 430px;
+    height: 50px;
+    left: 240px;;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* border: solid red; */
+}
+.boton{
+    position: relative;
+    top: 8px;
     padding: 0px 10px;
+    width: 120px;
     border: 0ch;
-    background-color: #f2b327;
-    font-size: 16px;
+    background-color: transparent;
+    font-size: 13px;
     text-transform: uppercase;
     font-weight: bold;
     color: black;
     transition: all 0.5s;
     cursor: pointer;
+    /* border: solid red; */
 
 }
 
-button:hover{
-    padding: 10px 25px;
+.boton:hover{
+    padding: 10px 15px;
     background-color: white;
     color: #f2b327;
     border-radius: 12px;
-    
+   
 }
 
 .logo{
-    margin-left: 25px;
+    position: relative;
+    margin-left: -240px;
     width: 120px;
     height: 50px;
     cursor: pointer;
-    position: static;
 }
 
 .buscar{
     position: absolute;
     padding: 5px;
-    
-    
+ 
 }
 
 .buscar input{
@@ -144,20 +159,6 @@ button:hover{
     font-size: 45px;
     cursor: pointer;
     color: black;
-}
-
-.container{
-    display: flex;
-    flex-direction: row;
-}
-
-.image {
-    padding: 0px;
-    width: 600px;
-    height: 600px;
-    margin-top: -30px;
-    margin-left: 250px; 
-    float: left;
 }
 
 footer{

@@ -47,9 +47,9 @@
 
 <style>
   .imagen{
-    padding: 0cm;
-    margin: -2.65cm 0cm;
     position: relative;
+    top: 4.5rem;
+    /* margin: -2.65cm 0cm; */
   }
 
   .introduccion{
