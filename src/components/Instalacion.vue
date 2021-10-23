@@ -53,7 +53,7 @@ export default {
   align-items: center;
   width: 90%;
   height: 90%;
-  /* border: 4px solid red; */
+  border: 4px solid red; 
 }
 .image {
   position: relative;

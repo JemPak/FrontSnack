@@ -1,7 +1,7 @@
 <template>
      <div class="container">
         <div class="banner">
-            <img src ="@/assets/contacto.jpg" class="image">
+            <img src ="@/assets/contacto.jpg" class="foto">
             <div class="form">
                 <h1>Solicitud de Contacto</h1>
 
@@ -47,6 +47,7 @@ export default {
 </script>
 
 <style>
+
 .icon1{
     font-size: 45px;
     cursor: pointer;
@@ -54,28 +55,39 @@ export default {
 }
 
 .container{
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* border: solid 2px red; */
 }
 
-.image {
+.foto{
+    position: relative;
+    left: 20px;
     padding: 0px;
-    width: 600px;
-    height: 600px;
-    margin-top: -30px;
-    margin-left: 250px; 
-    float: left;
+    width: 400px;
+    height: 400px;
+    /* border: solid 2px red; */
 }
 
 .form{
+    font-size: 10px;
     padding: 0px;
-    width: 800px;
+    width: 500px;
     float: left;
     margin-left: 80px;
     margin-top: -32px;
+    /* border: solid 2px red; */
 }
 
-h1{
+.form h1{
+    font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 90px;
 }
@@ -105,7 +117,7 @@ input, textarea{
 
 .field{
     margin-bottom: 15px;
-    width: 600px;
+    width: 400px;
     border: solid 1px #ccc;
     padding: 10px;
 }
