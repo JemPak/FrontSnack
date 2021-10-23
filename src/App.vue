@@ -57,7 +57,7 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 header{
-    position: fixed;
+    position: static;
     width: 100%;
     height: 4.5rem;
     display: flex;

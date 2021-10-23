@@ -4,8 +4,7 @@
             <img src ="@/assets/contacto.jpg" class="foto">
             <div class="form">
                 <h1>Solicitud de Contacto</h1>
-
-            <form>
+            <form v:on.prevent.submit="funcion">
                 <p>Nombre</p> 
                 <input type="text" class="field">
 
@@ -42,6 +41,11 @@ export default {
       return{
 
       }
+  },
+  methods: {
+      fucion: function(){
+          //codigo
+      }
   }
 };
 </script>
@@ -56,7 +60,7 @@ export default {
 
 .container{
     position: absolute;
-    top: 110%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
@@ -83,7 +87,12 @@ export default {
     float: left;
     margin-left: 80px;
     margin-top: -32px;
-    /* border: solid 2px red; */
+    /* border: solid 2px red; */    
+}
+.form form{
+    position: relative;
+    top: -75px;
+    /* border: solid red; */
 }
 
 .form h1{
@@ -93,7 +102,8 @@ export default {
 }
 
 .enviar{
-    margin-top: 43px;
+    margin-top: 10px;
+    margin-left: 160px;
     font-size: 15px;
     height: 40px;
     width: 100px;

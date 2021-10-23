@@ -71,7 +71,10 @@
     align-content: center;
     margin: 0.3cm;
   }
-
+  .texto h2{
+    padding-bottom: 10px;;
+    border-bottom: 2px solid aqua;
+  }
   .cuadros{
     padding: 0cm 2cm;
     display: flex;

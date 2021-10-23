@@ -25,7 +25,7 @@
           <input type="text" class="prod" />
         </div>
       </section>
-      <button>SUBMIT</button>
+      <button type="submit">SUBMIT</button>
     </form>
   </div>
 </template>
@@ -34,8 +34,16 @@
 export default {
   name: "Contacto",
   data() {
-    return {};
+    return {
+
+    };
   },
+  methods: {
+
+  },
+  created: function(){
+  
+  }
 };
 </script>
 
@@ -58,10 +66,10 @@ export default {
 .image {
   position: relative;
   top: 20px;
-  left: -150px;
+  left: 100px;
   width: 400px;
   height: 500px;
-  /* border: 3px solid red; */
+  border: 3px solid red;
 }
 .img {
   width: 400px;
@@ -69,8 +77,9 @@ export default {
 }
 .forms {
   position: relative;
-  left: -80px;
-  /* border: 1px solid aqua; */
+  top: 20px;
+  left: 150px;
+  border: 1px solid aqua;
   width: 800px;
   height: 500px;
   display: flex;
@@ -103,6 +112,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
+  top: -5px;
   /* border: 1px solid aqua; */
 }
 .etiquetas h4 {
@@ -127,7 +138,7 @@ export default {
 .forms button{
   position: relative;
   left: 270px;
-  bottom: -10px;
+  bottom: 10px;
   width: 100px;
   height: 55px;
   background-color: #f2b327;
