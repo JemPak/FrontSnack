@@ -4,27 +4,29 @@
             <img src ="@/assets/contacto.jpg" class="foto">
             <div class="form">
                 <h1>Solicitud de Contacto</h1>
-            <form v:on.prevent.submit="funcion">
+            <form v-on:submit.prevent="postContacto">
                 <p>Nombre</p> 
-                <input type="text" class="field">
-
-                <p>Telefono</p>
-                <input type="text" class="field">
+                <input v-model="data.nombre" type="text" class="field"> 
 
                 <p>Correo electronico</p>
-                <input type="email" class="field">
+                <input v-model="data.email" type="email" class="field"> 
 
-                <p>Tipo de asesoria</p>
-                <select name="transporte" class="field">
-                    <option>Informacion de los Productos</option>
-                    <option>Informacion de las Maquinas</option>
-                    <option>Quejas y Reclamos</option>
-                </select>
+                <p>Telefono</p>
+                <input v-model="data.tel" type="text" class="field">
 
                 <p>Comentarios adicionales</p>
-                <textarea class="field"></textarea>
+                <textarea v-model="data.comentario" class="field"></textarea>
                 <br>
-                <input type="submit" class="enviar">
+
+                <p>Tipo de asesoria</p>
+                <select v-model="data.asesoria" name="transporte" class="field">
+                    <option>Informacion</option>
+                    <option>Instalacion</option>
+                    <option>Quejas y reclamos</option>
+                </select>
+
+                <button type="submit" class="enviar"> Enviar </button>
+
             </form>    
             </div>
         </div>
@@ -40,13 +42,34 @@ export default {
   name: "Contacto",
   data(){
       return{
+        data:{
+        "nombre": "",
+        "email": "",
+        "tel": null,
+        "comentario": "",
+        "asesoria": null
+    }
 
       }
   },
   methods: {
-      fucion: function(){
-          //codigo
-      }
+    postContacto: async function(){
+        let endpoint = "https://snack-time-back.herokuapp.com/contacto/"
+        let params = { headers: {} };
+        try{
+            let result = await axios.post(endpoint, this.data, params);
+            alert("Solicitud creada correctamente");
+            console.log(result);
+        }catch (error){
+            if (error.response.status == 400)
+            alert("Error inesperado, intente de nuevo más tarde o verifique los datos");
+            console.log(error.response);
+        }
+    }
+  },
+
+  created: function(){
+
   }
 };
 </script>
