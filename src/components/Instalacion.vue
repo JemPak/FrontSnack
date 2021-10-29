@@ -3,7 +3,7 @@
     <div class="image">
       <img src="@/assets/men.jpg" alt="imagen" class="img" />
     </div>
-    <form class="forms">
+    <form v-on:submit.prevent="postCliente" class="forms">
       <h2>SOLICITUD DE INSTALACION</h2>
       <section class="section1 etiquetas">
         <div class="lado-izq">
@@ -16,12 +16,12 @@
           <h4>PRODUCTOS</h4>
         </div>
         <div class="lado-der">
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-          <input type="email" />
-          <input type="text" />
+          <input v-model="data.nombre" type="text" />
+          <input v-model="data.nit" type="text" />
+          <input v-model="data.direc" type="text" />
+          <input v-model="data.ciudad" type="text" />
+          <input v-model="data.email" type="email" />
+          <input v-model="data.tel" type="text" />
           <input type="text" class="prod" />
         </div>
       </section>
@@ -31,15 +31,38 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
-  name: "Contacto",
+  name: "Instalacion",
   data() {
     return {
-
-    };
+      // 'id_cliente','nombre','nit','direc','ciudad','email','tel'
+      data: {
+        nombre: "",
+        nit: "",
+        direc: "",
+        ciudad: "",
+        email: "",
+        tel: "",
+        // productos: ""
+      }
+    }
   },
   methods: {
-
+    postCliente: async function(){
+      let endpoint = "https://snack-time-back.herokuapp.com/cliente/"
+      let params = { headers: {} };
+      try{
+        let result = await axios.post(endpoint, this.data, params);
+        alert("Cliente creado correctamente");
+        console.log(result);
+      }catch (error){
+        if (error.response.status == 400)
+          alert("Usuario o contraseña incorrectos");
+        else alert("Error inesperado, intente de nuevo más tarde");
+        console.log(error.response);
+      }
+    }
   },
   created: function(){
   
@@ -61,7 +84,7 @@ export default {
   align-items: center;
   width: 90%;
   height: 90%;
-  border: 4px solid red; 
+  /* border: 4px solid red;  */
 }
 .image {
   position: relative;
@@ -69,7 +92,7 @@ export default {
   left: 100px;
   width: 400px;
   height: 500px;
-  border: 3px solid red;
+  /* border: 3px solid red; */
 }
 .img {
   width: 400px;
@@ -79,7 +102,7 @@ export default {
   position: relative;
   top: 20px;
   left: 150px;
-  border: 1px solid aqua;
+  /* border: 1px solid aqua; */
   width: 800px;
   height: 500px;
   display: flex;

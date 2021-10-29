@@ -1,6 +1,6 @@
 <template>
   <div class="imagen"> 
-    <img src="@/assets/frutos2.jpg"    width=1349>
+    <img src="@/assets/frutos2.jpg">
   </div>
   <div class="introduccion">
     <h2>
@@ -47,8 +47,11 @@
 
 <style>
   .imagen{
+    width: 1349px;
     position: relative;
-    top: 4.5rem;
+    top: 0px;
+    margin-left: auto;
+    margin-right: auto;
     /* margin: -2.65cm 0cm; */
   }
 
