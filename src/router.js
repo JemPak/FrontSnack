@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import App from "./App.vue";
-//import  #name_component from './components/Producto.vue'
+import Producto from './components/Producto.vue'
 import Contacto from './components/Contacto.vue'
 import Instalacion from './components/Instalacion.vue'
 //import #name_componente from './components/Solicitud.vue'
@@ -27,6 +27,11 @@ const routes = [
     path:"/Solicitud/Instalacion",
     name: "Instalacion",
     component: Instalacion,
+  }, 
+  {
+    path: "/Producto",
+    name: "Producto",
+    component: Producto
   }
 ];
 const router = createRouter({

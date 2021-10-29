@@ -9,7 +9,7 @@
         </div>
         <nav class="nav">
             <button v-on:click="Home" class="boton">Nosotros</button>
-            <button class="boton" >Productos</button>
+            <button v-on:click="Producto" class="boton" >Productos</button>
             <button v-on:click="Contacto" class="boton">Contacto</button>
             <button v-on:click="ir_Instalacion" class="boton">Solicitud</button>
         </nav>
@@ -41,6 +41,9 @@ export default {
         this.$router.push({ name: "Instalacion" });
 
     },
+    Producto: function(){
+        this.$router.push({ name: "Producto" });
+    },
     
   },
   created: function(){
@@ -67,7 +70,7 @@ header{
     border-bottom: 3px solid rgb(194, 123, 9);
     background-color: #f2b327;
 }
-.nav{
+nav{
     position: relative;
     width: 430px;
     height: 50px;
