@@ -59,12 +59,19 @@ export default {
         try{
             let result = await axios.post(endpoint, this.data, params);
             alert("Solicitud creada correctamente");
+            this.cleanForm();
             console.log(result);
         }catch (error){
             if (error.response.status == 400)
             alert("Error inesperado, intente de nuevo más tarde o verifique los datos");
             console.log(error.response);
         }
+    },
+    cleanForm: function(){
+        this.data.nombre = "";
+        this.data.email = "";
+        this.data.tel = "";
+        this.data.comentario = "";
     }
   },
 

@@ -21,13 +21,13 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <div class="oferta" align="center">
       <h3>
-        Brindamos una experiencia de snack saludables, en nuetsra maquinas dispensadoras encontraras gran variedad de frutos secos, que podras  adquirir de acuerdo a tu cantidad deseadas.
+        Brindamos una experiencia de snack saludables, en nuestras maquinas dispensadoras encontraras gran variedad de frutos secos, que podras  adquirir de acuerdo a tu cantidad deseadas.
       </h3>
     </div>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <div class="beneficios" align="center">
       <h3>
-        Los frutos secos, aparte de ser sabrosos, disminuyen el riesgo cardiovascular, son ricos en proteínas, fibra y minerales y poseen notables virtudes antioxidantes.
+        Los frutos secos, aparte de ser sabrosos, disminuyen el riesgo cardiovascular, son ricos en proteínas, fibra, minerales y poseen notables virtudes antioxidantes.
       </h3>
     </div> 
   </div>
@@ -46,13 +46,22 @@
 </script>
 
 <style>
+  body{
+    background-color: rgb(255,246,219);
+  } 
   .imagen{
-    width: 1349px;
+    width: 1340px;
+    height: 300px;
     position: relative;
     top: 0px;
     margin-left: auto;
     margin-right: auto;
-    /* margin: -2.65cm 0cm; */
+    /* border: solid red; */
+  }
+  .imagen img{
+    width: 1340px;
+    height: 300px;
+
   }
 
   .introduccion{
