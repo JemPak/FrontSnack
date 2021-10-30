@@ -41,7 +41,8 @@
 
     methods:{},
     created: function(){
-        console.log("hola");}
+        // console.log("hola");
+    }
   }
 </script>
 

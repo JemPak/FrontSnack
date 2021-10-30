@@ -89,15 +89,10 @@
       <!-- </div> -->
     </div>
   </section>
-  <section class="image-light">
-    <img src="@/assets/close.svg" alt="" class="close" />
-    <img src="@/assets/frutos2.jpg" alt="" class="agregar-imagen" />
-  </section>
+
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
   name: "Producto",
   data() {

@@ -56,13 +56,13 @@ export default {
       try{
         let result = await axios.post(endpoint, this.data, params);
         alert("Solicitud de Instalación Exitosa !!");
-        console.log(result);
+        // console.log(result);
         this.cleanForm();
       }catch (error){
         if (error.response.status == 400)
           alert("Por favor rellene todos los datos completos");
         else alert("Error inesperado, intente de nuevo más tarde");
-        console.log(error.response);
+        // console.log(error.response);
       }
     },
     cleanForm: function(){
